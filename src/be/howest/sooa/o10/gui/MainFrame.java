@@ -262,6 +262,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void showEncounterDialog(Pokemon pokemon, Location location) {
         Encounter encounter = new Encounter(pokemon, location);
         EncounterDialog dialog = new EncounterDialog(this, encounter);
+        dialog.setTitle(pokemon.toString());
         centerScreen(dialog);
         addDialogKeyListener(dialog);
         dialog.addWindowListener(new java.awt.event.WindowAdapter() {
